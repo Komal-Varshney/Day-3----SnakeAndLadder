@@ -37,6 +37,10 @@ public class SnakeandLadder {
             int dieRoll = random.nextInt(6) + 1;
             int option = random.nextInt(3);
 
+            if (position + dieRoll > 100) {
+                continue; // Skip if the position exceeds 100
+            }
+
             switch (option) {
                 case 0: // No Play
                     break;
@@ -52,5 +56,4 @@ public class SnakeandLadder {
         }
         System.out.println("Congratulations! You reached position 100.");
     }
-
 }
